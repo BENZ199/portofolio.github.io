@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Emilys+Candy&family=Oswald&display=swap');
+
+header::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    border-radius: 10px;
+  }
+  
+  header:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    border-radius: 10px;
+  }
+  
+  header::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background:  #ffffff;
+    z-index: -1;
+    transition: transform .3s ease;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    position: relative;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0 2px 0 2px;
+    color:rgb(33, 5, 123);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+  
+-----------------------
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgb(243, 243, 182);
+  font-size: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+picture {
+  height: 10vh;
+  flex-direction: column;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: monospace;
+  color:  #291e91;
+
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.clock {
+  height: 60px;
+  width: 120px;
+  font-size: 19px;
+  border: 3px solid black;
+  border-radius: 2px;
+  background-color: #291e91;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.5);
+}
+.clock:hover {
+  animation: alarm 0.1s infinite;
+}
+.clock::before {
+  height: 30px;
+  width: 6.6666666667px;
+  position: absolute;
+  border-radius: 0 2px 2px 0;
+  transform: translateX(63.1578947368px);
+  background-image: repeating-linear-gradient(#595959 0 1%, black 0 1.5%);
+}
+.clock::after {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    #262626 0 40%,
+    transparent 0 60%,
+    #262626 0 100%
+  );
+  transform: translateY(-31.914893617px) translateX(-30px);
+}
+k {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 104.347826087px;
+  border: 5px solid black;
+  border-radius: 2px;
+  padding: 5%;
+  background: linear-gradient(
+      to right,
+      transparent 0 64%,
+      black 0 67%,
+      transparent 0 100%
+    ),
+    linear-gradient(#595959 0 50%, #262626 0 100%);
+}
+k::before {
+  content: "";
+  position: absolute;
+  height: 6.6666666667px;
+  width: 100px;
+  background-color: #262626;
+  transform: translateY(33.3333333333px);
+}
+@keyframes alarm {
+  35% {
+    transform: scale(1.5) rotate(10deg);
+  }
+  65% {
+    transform: scale(1.5) rotate(-10deg);
+  }
+}
+
+header{
+    background-color: rgb(229, 236, 236);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 100px;
+}
+
+
+.navigation a{
+    color: rgb(54, 54, 171);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    margin-top:10px ;
+    margin-bottom:5px ;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: rgb(16, 16, 16);
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(portofolio1.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main div h2{
+    color:rgb(229, 236, 236);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    margin-top:10px ;
+    margin-bottom:5px ;
+}
+.main div span {
+    display: inline-block;
+    margin-top: 10px;
+    color :blue;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 26px;
+    letter-spacing: 1.4px;
+    word-spacing: -0.2px;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+.main h3{
+    color:rgb(229, 236, 236);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    margin-top:10px ;
+    margin-bottom:30px ;
+}
+.main-btn{
+   
+   color: aliceblue; 
+   background-color: blue;
+   text-decoration: none;
+   font-size: 1.1em;
+   font-weight: 600;
+   display: inline-block;
+   padding: 0.9300em 2.1800em;
+   letter-spacing: 1px;
+   border-radius:15px;
+   margin-bottom: 40px;
+
+   
+}
+
+.main-btn:hover{
+     
+    background-color: rgb(145, 145, 244);
+     transform: scale(1.1);
+
+} 
+
+.social-icons a{
+    color: beige;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+.title{
+    display:flex;
+    justify-content: center;
+    color: blueviolet;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 15em;
+    box-shadow: 0 5px 15px rgba(1 1 1 / 100%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7 ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: blue;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: blue;
+    font-size: 1.2 em;
+    font-weight:700;
+    margin: 10px;
+}
+.projects{
+    background-color:black;
+}
+.projects .content{
+    margin-top: 30px;   
+}
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width:23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin:20px;
+    transition:0.7 ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+.project-image img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color:black;
+    font-weight: 900;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: blueviolet;
+    padding-left: 1em;
+}
+.more-details:hover{
+    color: blue;
+}
+.contact .icon{ 
+font-size: 3.5em;
+}
+
+.contact .icon h3{
+color: black;
+}
+.contact .icon p{
+    font-size: 1.5em;
+}
+.footer{
+    background-color: black;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: blue;
+}
+.footer .social-icons a{
+    font-size: 3em;
+    padding: 0 12px 0 0;
+}
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a {
+        padding-left:10px ;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media( max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media(max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
